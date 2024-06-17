@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="https://cdn.discordapp.com/attachments/1200378596414468137/1252172389983195136/Char_moderny.jpg?ex=66713fea&is=666fee6a&hm=8741433f59330688bd3c3c295f4ff573fb9560756f22c24723bcfba404651f98&">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body class="bg-[#fee5017e]">
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
