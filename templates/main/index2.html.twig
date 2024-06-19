@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vendetta RP{% endblock %}
+
+{% block body %}
+<nav class="bg-[#fee501] p-4 shadow-lg shadow-[#292201]">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex-none">
+            <img src="https://media.discordapp.net/attachments/1200378596414468137/1252172389983195136/Char_moderny.jpg?ex=66713fea&is=666fee6a&hm=8741433f59330688bd3c3c295f4ff573fb9560756f22c24723bcfba404651f98&=&format=webp" alt="vendetta rp" class="w-16 h-16">
+        </div>
+        <!-- Menu -->
+        <div class="ml-auto flex space-x-6">
+            <a href="{{ path('app_job_index') }}" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Métiers légaux</a>
+            <a href="{{ path('app_job_index') }}" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Métiers illégaux</a>
+            <a href="{{ path('app_contact_index') }}" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Reprise d'activité</a>
+            <a href="{{ path('app_contact_index') }}" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Contact</a>
+            <a href="#" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Administration</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Texte de description -->
+<div class="container mx-auto mt-8">
+    <div class="flex flex-col md:flex-row items-center">
+        <!-- Bloc de description -->
+        <div class="w-full mb-8 md:mb-0">
+            <h1 class="text-3xl font-bold text-[#292201]">Présentation du Serveur Vendetta RP - GTA V</h1>
+            <p class="mt-4 text-lg text-[#292201]">Bienvenue sur Vendetta RP, le serveur de roleplay ultime pour les passionnés de GTA V ! Plongez dans une expérience immersive où chaque décision compte et chaque interaction peut changer le cours de votre aventure. Que vous soyez un citoyen respectueux des lois, un entrepreneur ambitieux, ou un criminel notoire, Vendetta RP vous offre une plateforme dynamique pour explorer votre créativité et vivre des histoires palpitantes.</p>
+
+            <h2 class="mt-6 text-2xl font-semibold text-[#8e7f00]">Pourquoi choisir Vendetta RP ?</h2>
+            <ul class="list-disc ml-5 mt-2 text-lg text-[#292201] space-y-2">
+                <li><strong>Communauté Active :</strong> Rejoignez une communauté passionnée et active où le respect et la collaboration sont au cœur du jeu.</li>
+                <li><strong>Système Économique Réaliste :</strong> Participez à une économie en constante évolution, que ce soit en montant votre entreprise ou en réalisant des coups spectaculaires.</li>
+                <li><strong>Événements et Activités :</strong> Prenez part à des événements réguliers et à des activités variées, allant des courses de rue aux braquages de banque.</li>
+                <li><strong>Support et Développement Continus :</strong> Profitez d'un serveur régulièrement mis à jour avec des nouveautés, des améliorations et un support technique réactif.</li>
+            </ul>
+
+            <h2 class="mt-6 text-2xl font-semibold text-[#8e7f00]">Rejoignez-nous dès aujourd'hui !</h2>
+            <p class="mt-2 text-lg text-[#292201]">Pour faciliter votre intégration et maximiser votre expérience, nous mettons à votre disposition un site web dédié. Ce site sera votre hub principal pour toutes les informations essentielles et les dernières nouveautés du serveur. Vous y trouverez également une section spéciale pour consulter et postuler aux différents postes disponibles dans le jeu.</p>
+
+            <h2 class="mt-6 text-2xl font-semibold text-[#8e7f00]">Découvrez les postes disponibles</h2>
+            <p class="mt-2 text-lg text-[#292201]">Notre site vous permet de voir les postes actuellement ouverts, que vous souhaitiez devenir policier, médecin, mécanicien, ou même maire ! Chaque poste vient avec ses propres responsabilités et opportunités, vous permettant de trouver le rôle qui correspond le mieux à votre style de jeu et à vos aspirations dans l'univers de Vendetta RP.</p>
+
+            <p class="mt-4 text-lg text-[#292201]"><strong>Ne manquez pas cette chance de faire partie de quelque chose de grand !</strong></p>
+            <p class="mt-2 text-lg text-[#292201]">Inscrivez-vous dès maintenant sur notre site web, consultez les postes disponibles, et préparez-vous à vivre une aventure inoubliable sur Vendetta RP. Rejoignez-nous et laissez votre empreinte dans le monde de GTA V RP.</p>
+
+            <p class="mt-4 mb-5 text-lg text-[#292201]"><strong>À bientôt sur Vendetta RP !</strong></p>
+        </div>
+    </div>
+</div>
+
+<!-- Formulaire de contact -->
+<div class="container mx-auto mt-8 p-4 bg-[#fee501] rounded-lg">
+    <h2 class="text-2xl font-semibold text-[#292201]">Formulaire de reprise</h2>
+    <form action="#" method="POST" class="mt-4">
+        <div class="mb-4">
+            <label for="titre" class="block text-lg font-semibold text-[#292201]">Titre :</label>
+            <input type="text" id="titre" name="titre" class="w-full px-3 py-2 rounded-lg border-[#292201] border focus:outline-none focus:border-[#8e7f00]" required>
+        </div>
+        <div class="mb-4">
+            <label for="message" class="block text-lg font-semibold text-[#292201]">Message :</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 rounded-lg border-[#292201] border focus:outline-none focus:border-[#8e7f00]" required></textarea>
+        </div>
+        <button type="submit" class="bg-[#292201] text-[#fee501] py-2 px-4 rounded-lg font-semibold hover:bg-[#8e7f00]">Envoyer</button>
+    </form>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="mt-8 bg-[#fee501] py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+        <!-- Liens Discord dans le footer -->
+        <div class="flex space-x-4 p-5">
+            <a href="https://discord.gg/TncVtHfqD5" target="_blank" rel="noopener noreferrer" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Discord Principal</a>
+            <a href="https://discord.gg/5TgTFNJ4zt" target="_blank" rel="noopener noreferrer" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Discord Légal</a>
+            <a href="https://discord.gg/eUnMyXa64X" target="_blank" rel="noopener noreferrer" class="text-[#292201] hover:text-[#8e7f00] font-semibold">Discord Illégal</a>
+        </div>
+        <!-- Texte de copyright -->
+        <p class="text-[#292201] text-sm">&copy; 2024 Vendetta RP. Tous droits réservés.</p>
+    </div>
+</footer>
+{% endblock %}

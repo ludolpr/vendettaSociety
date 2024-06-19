@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./spacer.css";
+@import "./font.css";
+@import "./footer.css";

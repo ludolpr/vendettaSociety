@@ -22,6 +22,23 @@ class JobController extends AbstractController
         ]);
     }
 
+    #[Route('/legal', name: 'app_job_legal', methods: ['GET'])]
+    public function legal(JobRepository $jobRepository): Response
+    {
+        return $this->render('job/available.html.twig', [
+            'jobs' => $jobRepository->findAvailable(0),
+        ]);
+    }
+
+    #[Route('/illegal', name: 'app_job_illegal', methods: ['GET'])]
+    public function illegal(JobRepository $jobRepository): Response
+    {
+        return $this->render('job/available.html.twig', [
+            'jobs' => $jobRepository->findAvailable(1),
+        ]);
+    }
+
+
     #[Route('/new', name: 'app_job_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {

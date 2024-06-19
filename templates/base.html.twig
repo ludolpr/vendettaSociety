@@ -1,20 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="https://cdn.discordapp.com/attachments/1200378596414468137/1252172389983195136/Char_moderny.jpg?ex=66713fea&is=666fee6a&hm=8741433f59330688bd3c3c295f4ff573fb9560756f22c24723bcfba404651f98&">
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body class="bg-[#fee5017e]">
-        {% block body %}
-        {% endblock %}
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/40e3698765.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.discordapp.com/attachments/1200378596414468137/1252172389983195136/Char_moderny.jpg?ex=66713fea&is=666fee6a&hm=8741433f59330688bd3c3c295f4ff573fb9560756f22c24723bcfba404651f98&"
+    />
+    {% block stylesheets %}
+    {{
+      encore_entry_link_tags("app")
+    }}
+    {% endblock %} {% block javascripts %}
+    {{
+      encore_entry_script_tags("app")
+    }}
+    {% block importmap %}{{
+      importmap("app")
+    }}{% endblock %} {% endblock %}
+  </head>
+  <body
+    class="vh100 bg-cover bg-center bg-top"
+    style="
+      background-image: url('https://cdn.discordapp.com/attachments/1200378596414468137/1252543735514923019/wp9342857-gta-5-pc-4k-wallpapers.jpg?ex=667299c1&is=66714841&hm=8d4a406b9422878aab2651fbb2e648da20bb2c67c792efbe9a89aef9b05c1c1d&');
+    "
+  >
+    <header>
+      <div>
+        <nav class="bg-[#242424] shadow-lg shadow-white">
+          <div class="container flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex-none row-auto m-0">
+              <img
+                src="https://imgs.search.brave.com/8KTHgCBZGLoIjL06VK3C6ShFWznpnjyZ6VATN4aW0Hw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9l/L2UxL0dyYW5kX1Ro/ZWZ0X0F1dG9fbG9n/b19zZXJpZXMuc3Zn.svg"
+                alt="vendetta rp"
+                class="flex-1w-24 h-24"
+              />
+            </div>
+            <!-- Title -->
+            <div class="mx-auto text-3xl">
+              <h1 class="text-white hover:text-[#fee501] font-semibold">
+                <a
+                  href="/"
+                  class="text-[#fee501] hover:text-white bg-text-[#fee501]"
+                  >Vendetta RP</a
+                >
+              </h1>
+            </div>
+            <!-- Menu -->
+            <div class="ml-auto flex space-x-6">
+              <a
+                href="{{ path('app_job_legal') }}"
+                class="text-white hover:text-[#fee501] bg-text-white font-semibold"
+                >Métiers légaux</a
+              >
+              <a
+                href="{{ path('app_job_illegal') }}"
+                class="text-white hover:text-[#fee501] font-semibold"
+                >Métiers illégaux</a
+              >
+              <a
+                href="{{ path('app_contact_new') }}"
+                class="text-white hover:text-[#fee501] font-semibold"
+                >Reprise d'activité</a
+              >
+              <a href="#" class="text-white hover:text-[#fee501] font-semibold"
+                >Administration</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    {% block body %}
+    {% endblock %}
+    <footer class="bg-[#242424] content-end footer">
+      <div class="copyright text-white">
+        &copy; Copyright - ludolpr - Legacy 2024
+      </div>
+      <div class="text-white m-5">
+        <a
+          href="https://discord.gg/TncVtHfqD5"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="m-5"
+          ><i class="fab fa-discord"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@vendetta.rp.oxy?lang=fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="m-5"
+          ><i class="fab fa-tiktok"></i
+        ></a>
+        <a
+          href="https://vendetta-rp-shop.tebex.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="m-5"
+          ><i class="fa-solid fa-shop"></i>
+        </a>
+        <a
+          href="https://top-serveurs.net/gta/vote/vendetta-rp-666f4aeef2575"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="m-5"
+          ><i class="fa-solid fa-check-to-slot"></i>
+        </a>
+        
+      </div>
+    </footer>
+  </body>
 </html>
