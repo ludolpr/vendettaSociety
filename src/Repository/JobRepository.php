@@ -29,6 +29,16 @@ class JobRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+    public function findDiponibility($value): array
+    {
+        return $this->createQueryBuilder('j')
+            ->andWhere('j.available = :val')
+            ->setParameter('val', $value)
+            ->orderBy('j.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
 
     //    public function findOneBySomeField($value): ?Job
     //    {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>{% block title %}Welcome!{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://kit.fontawesome.com/40e3698765.js" crossorigin="anonymous"></script>
     <link
@@ -27,10 +28,8 @@
     }}{% endblock %} {% endblock %}
   </head>
   <body
-    class="vh100 bg-cover bg-center bg-top"
-    style="
-      background-image: url('https://cdn.discordapp.com/attachments/1200378596414468137/1252543735514923019/wp9342857-gta-5-pc-4k-wallpapers.jpg?ex=667299c1&is=66714841&hm=8d4a406b9422878aab2651fbb2e648da20bb2c67c792efbe9a89aef9b05c1c1d&');
-    "
+  class="vh100"
+ 
   >
     <header>
       <div>
@@ -71,7 +70,7 @@
                 class="text-white hover:text-[#fee501] font-semibold"
                 >Reprise d'activité</a
               >
-              <a href="#" class="text-white hover:text-[#fee501] font-semibold"
+              <a href="/admin" class="text-white hover:text-[#fee501] font-semibold"
                 >Administration</a
               >
             </div>
@@ -83,7 +82,7 @@
     {% endblock %}
     <footer class="bg-[#242424] content-end footer">
       <div class="copyright text-white">
-        &copy; Copyright - ludolpr - Legacy 2024
+        &copy; Copyright - Ludolpr - Legacy 2024
       </div>
       <div class="text-white m-5">
         <a

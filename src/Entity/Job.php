@@ -37,6 +37,9 @@ class Job
     #[ORM\Column]
     private ?bool $available = null;
 
+    #[ORM\Column]
+    private ?bool $disponible = null;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -141,6 +144,18 @@ class Job
     public function setAvailable(bool $available): static
     {
         $this->available = $available;
+
+        return $this;
+    }
+
+    public function isDisponible(): ?bool
+    {
+        return $this->disponible;
+    }
+
+    public function setDisponible(bool $disponible): static
+    {
+        $this->disponible = $disponible;
 
         return $this;
     }

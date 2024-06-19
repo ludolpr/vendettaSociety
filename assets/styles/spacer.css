@@ -1,6 +1,5 @@
 .sp550 {
   width: 100%;
-  margin-top: 200px;
   background-color: #2424249f;
 }
 
@@ -12,16 +11,35 @@ body {
     rgba(255, 254, 234, 1) 35%,
     #242424 100%
   );
-  overflow: hidden;
+
+  background-image: url('https://cdn.discordapp.com/attachments/1200378596414468137/1252956856150917271/gta1920-wallpapers.png?ex=66741a81&is=6672c901&hm=9473a5e2648e08f9e2e7aa71d7b7ad3406e601c325b3688d39cd57e9ed72dde8&');
+  /* background-position: cover; */
   display: flex;
   flex-direction: column;
   font-family: "Kanit", sans-serif;
   font-weight: 100;
   font-style: normal;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   margin: 0;
+  margin-top: 96px;
+
 }
+
 
 .mb150 {
   margin-bottom: 200px;
+}
+
+
+.vh100 {
+  min-height: 100vh;
+}
+
+.h100{
+  min-height: 100%;
+}
+
+.p125 {
+  padding: 0 125px;
 }

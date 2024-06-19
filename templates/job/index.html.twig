@@ -6,7 +6,13 @@
 <div class="bg-[#2424249f] m-0">
 
     <div class="text-center justify-center content-center">
-        <h1 class="text-2xl font-bold mb-4 mt-5 text-white justify-center m-5">Liste des metiers</h1>
+        {% if job.available == 0 %}
+        <h1 class="text-2xl font-bold mb-4 mt-5 text-white justify-center m-5">Liste des metiers légale</h1>
+        {% else % }
+        <h1 class="text-2xl font-bold mb-4 mt-5 text-white justify-center m-5">Liste des metiers illégale</h1>
+
+        {% endif %}
+       
         <p class="text-xl font-bold mb-4 mt-5 text-white justify-center m-5">
             Bienvenue sur la page des emplois. Vous y trouverez la liste des emplois disponibles. N'hésitez pas à la
             parcourir et à trouver celle qui vous convient le mieux. Pour plus de détails, cliquez sur le lien
@@ -34,7 +40,7 @@
                 {% if job.available == 0 %}
                     <tr>
                         <h2>Légal</h2>
-                        <td class="px-6 py-4 whitespace-nowrap">{{ job.id }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">{{ job.user.pseudo }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ job.name }}</td>
                         <td class="px-6 py-4 whitespace-nowrap">{{ job.description }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
@@ -61,13 +67,7 @@
             {% endfor %}
             </tbody>
         </table>
-    </div>
-
-    <div class="text-center mt-6">
-        <a href="{{ path('app_job_new') }}"
-            class="bg-[#fee501] text-black px-4 py-2 rounded-md shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">Create
-            New</a>
-    </div>
+    </div>>
 
 </div>
 {% endblock %}
