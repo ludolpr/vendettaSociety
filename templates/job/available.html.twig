@@ -13,8 +13,8 @@
             "afficher" à côté de l'emploi. </p>
     </div>
 
-    <div class="flex justify-center">
-        <table class="min-w-full divide-y divide-gray-200 bg-[#242424] text-white mb-6 w-full">
+    <div class="flex justify-center  ">
+        <table class="min-w-full divide-y divide-gray-200 bg-[#242424] text-white mb-6">
             <thead class="bg-gray-50 text-black">
                 <tr>
         
@@ -24,20 +24,17 @@
                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
                         Description
                     </th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                        Voir la fiche
-                    </th>
+                   
                    
     
                 </tr>
             </thead>
-            <tbody class="bg-white divide-y divide-gray-200 text-black">
+            <tbody class="bg-white divide-y divide-gray-200 text-black col-auto">
                 {% for job in jobs %}
                 {% if job.available == 0 %}
                 {% if job.disponible == 0 %}
                     <tr  class="bg-white">
                         <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.name }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.description }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                             <a href="{{ path('app_job_show', {'id': job.id}) }}" class="text-black hover:text-black">Afficher</a>
                         </td>
@@ -47,7 +44,6 @@
                 {% else %}
                 <tr  class="bg-[#fee501]">
                     <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.name }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.description }}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <a href="{{ path('app_job_show', {'id': job.id}) }}" class="text-black hover:text-black">Afficher</a>
                     </td>
@@ -57,7 +53,6 @@
                 {% if job.disponible == 0 %}
                     <tr  class="bg-white">
                         <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.name }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.description }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                             <a href="{{ path('app_job_show', {'id': job.id}) }}" class="text-black hover:text-black">Afficher</a>
                         </td>
@@ -67,7 +62,6 @@
                 {% else %}
                 <tr  class="bg-[#fee501]">
                     <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.name }}</td>
-                    <td class="px-6 py-4 whitespace-nowrap font-medium">{{ job.description }}</td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <a href="{{ path('app_job_show', {'id': job.id}) }}" class="text-black hover:text-black">Afficher</a>
                     </td>

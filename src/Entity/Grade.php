@@ -25,7 +25,7 @@ class Grade
     #[ORM\ManyToOne(inversedBy: 'grades')]
     private ?Job $job = null;
 
-
+    
     public function getId(): ?int
     {
         return $this->id;

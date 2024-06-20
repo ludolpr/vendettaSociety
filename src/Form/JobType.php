@@ -15,6 +15,7 @@ class JobType extends AbstractType
             ->add('name')
             ->add('description')
             ->add('society_type')
+            
         ;
     }
 

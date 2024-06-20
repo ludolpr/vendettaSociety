@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4">S'enregistrer</h1>
+
+        {{ form_start(registrationForm, { attr: { class: 'space-y-4' } }) }}
+        
+        <div>
+            {{ form_label(registrationForm.email, null, { label_attr: { class: 'block text-sm font-medium text-gray-700' } }) }}
+            {{ form_widget(registrationForm.email, { attr: { class: 'mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-[#fee501] focus:border-[#fee501]' } }) }}
+            {{ form_errors(registrationForm.email, { attr: { class: 'text-red-600 text-sm mt-1' } }) }}
+        </div>
+
+        <div>
+            {{ form_label(registrationForm.pseudo, null, { label_attr: { class: 'block text-sm font-medium text-gray-700' } }) }}
+            {{ form_widget(registrationForm.pseudo, { attr: { class: 'mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-[#fee501] focus:border-[#fee501]' } }) }}
+            {{ form_errors(registrationForm.pseudo, { attr: { class: 'text-red-600 text-sm mt-1' } }) }}
+        </div>
+
+        <div>
+            {{ form_label(registrationForm.bio, null, { label_attr: { class: 'block text-sm font-medium text-gray-700' } }) }}
+            {{ form_widget(registrationForm.bio, { attr: { class: 'mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-[#fee501] focus:border-[#fee501]' } }) }}
+            {{ form_errors(registrationForm.bio, { attr: { class: 'text-red-600 text-sm mt-1' } }) }}
+        </div>
+
+        <div>
+            {{ form_label(registrationForm.picture, null, { label_attr: { class: 'block text-sm font-medium text-gray-700' } }) }}
+            {{ form_widget(registrationForm.picture, { attr: { class: 'mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-[#fee501] focus:border-[#fee501]' } }) }}
+            {{ form_errors(registrationForm.picture, { attr: { class: 'text-red-600 text-sm mt-1' } }) }}
+        </div>
+
+        <div>
+            {{ form_label(registrationForm.plainPassword, 'Password', { label_attr: { class: 'block text-sm font-medium text-gray-700' } }) }}
+            {{ form_widget(registrationForm.plainPassword, { attr: { class: 'mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-[#fee501] focus:border-[#fee501]' } }) }}
+            {{ form_errors(registrationForm.plainPassword, { attr: { class: 'text-red-600 text-sm mt-1' } }) }}
+        </div>
+
+        <div>
+            {{ form_widget(registrationForm.agreeTerms, { attr: { class: 'h-4 w-4 text-blue-600 border-gray-300 rounded' } }) }}
+            {{ form_label(registrationForm.agreeTerms, null, { label_attr: { class: 'ml-2 block text-sm text-gray-900' } }) }}
+            {{ form_errors(registrationForm.agreeTerms, { attr: { class: 'text-red-600 text-sm mt-1' } }) }}
+        </div>
+
+        <div class="mt-6">
+            <button type="submit" class="w-full px-4 py-2 bg-black text-white rounded-md hover:bg-[#fee501] hover:text-black focus:outline-none focus:ring-2 focus:ring-[#fee501] focus:ring-opacity-50">S'enregistrer</button>
+        </div>
+
+        {{ form_end(registrationForm) }}
+    </div>
+</div>
+{% endblock %}

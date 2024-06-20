@@ -1,4 +1,13 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
+    <div>
+        {{ form_label(form.title, "titre de votre message", {'label_attr': {'block text-sm font-medium text-gray-700'}}) }}
+
+    </div>
+    <div>
+        {{ form_label(form.message, "message", {'label_attr': {'block text-sm font-medium text-gray-700'}}) }}
+
+
+    </div>
 {{ form_end(form) }}

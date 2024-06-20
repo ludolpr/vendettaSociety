@@ -70,10 +70,24 @@
                 class="text-white hover:text-[#fee501] font-semibold"
                 >Reprise d'activité</a
               >
-              <a href="/admin" class="text-white hover:text-[#fee501] font-semibold"
-                >Administration</a
-              >
+              {% if app.user %}
+              <a href="/logout" class="text-white hover:text-[#fee501] font-semibold"
+              >Déconnexion</a
+            >
+            {% else %}
+              <a href="/login" class="text-white hover:text-[#fee501] font-semibold"
+              >Connexion</a
+            >
+            <a href="/register" class="text-white hover:text-[#fee501] font-semibold"
+              >S'enregister</a
+            >
+            {% endif %} 
+            <a href="/admin" class="text-white hover:text-[#fee501] font-semibold"
+            >Administration</a
+            >
             </div>
+
+            
           </div>
         </nav>
       </div>
