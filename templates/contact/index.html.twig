@@ -5,62 +5,24 @@
 {% block body %}
 <div class="bg-[#2424249f] m-0 h100">
 
-    <div class="text-center justify-center content-center">
+    <div class="text-center justify-center content-center mt-5 pt-5 mh100">
         <h1 class="text-2xl font-bold mb-4 mt-5 text-white justify-center m-5">Reprise d'activitée</h1>
         <p class="text-xl font-bold mb-4 mt-5 text-white justify-center m-5 ">
-            Bienvenue dans l'univers de Vendetta RP. Veuillez remplir le formulaire ci-dessous pour soumettre votre demande de reprise, qu'elle soit légale ou illégale. Nous examinerons votre requête et reviendrons vers vous dès que possible via le discord principale.
+            Votre demande a bien été envoyé elle sera traitée par notre équipe dans les plus brefs délais.
         </p>
+
+        <p class="text-2xl font-bold mb-4 mt-5 text-white m-5 ">
+            Si vous avez des questions ou des préoccupations supplémentaires, n'hésitez pas à nous contacter via notre
+            système de tickets sur Discord. Nous sommes là pour vous aider !
+        </p>
+        <p class="text-2xl font-bold mb-4 mt-5 text-white m-5 ">
+            Dans le cas où vous n'avez pas de réponse, cela peut être dû à des vacances, un cocktail ou encore des
+            bouchons sur l'autoroute donc patience !
+        </p>
+        <a href="https://discord.com"
+            class="inline-block bg-black text-white hover:bg-[#fee501] hover:text-black font-bold py-2 px-4 rounded mt-5 ">
+            Discord
+        </a>
     </div>
-<div class="flex justify-center ">
-    <form method="post" action="{{ path('app_contact_new') }}" class="mb-6 w-1/2 justify-center content-center p-5 bg-[#242424] ">
-        <div class="mb-4">
-            <label for="title" class="block text-sm font-medium text-white">Titre de votre message</label>
-            <input type="text" id="title" name="title" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#fee501] focus:border-[#fee501] sm:text-sm" required>
-        </div>
-        <div class="mb-4">
-            <label for="message" class="block text-sm font-medium text-white">Message</label>
-            <textarea id="message" name="message" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#fee501] focus:border-[#fee501] sm:text-sm" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="bg-[#fee501] text-black px-4 py-2 rounded-md shadow-sm hover:bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">fait ta demande</button>
-    </form>
 </div>
-    
-<div>
-        <p class="text-2xl font-bold mb-4 mt-5 text-white ">
-            Si vous avez des questions ou des préoccupations supplémentaires, n'hésitez pas à nous contacter via notre système de tickets sur Discord. Nous sommes là pour vous aider !
-    </p>
-</div>
-</div>
-
-    <table class="min-w-full divide-y divide-gray-200">
-        <thead class="bg-gray-50">
-            <tr>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Id</th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Title</th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Message</th>
-                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">Actions</th>
-            </tr>
-        </thead>
-        <tbody class="bg-white divide-y divide-gray-200">
-        {% for contact in contacts %}
-            <tr>
-                <td class="px-6 py-4 whitespace-nowrap">{{ contact.id }}</td>
-                <td class="px-6 py-4 whitespace-nowrap">{{ contact.title }}</td>
-                <td class="px-6 py-4 whitespace-nowrap">{{ contact.message }}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}" class="text-black hover:text-black">Show</a>
-                    <a href="{{ path('app_contact_edit', {'id': contact.id}) }}" class="text-black hover:text-black ml-4">Edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4" class="px-6 py-4 whitespace-nowrap text-center text-black">Pas encore de message</td>
-            </tr>
-        {% endfor %}
-
-        
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_contact_new') }}" class="mt-6 inline-block bg-white text-black px-4 py-2 rounded-md shadow-sm hover:bg-[#fee501] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#fee501]">fait ta demande</a>
 {% endblock %}

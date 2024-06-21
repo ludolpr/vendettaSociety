@@ -2,7 +2,7 @@
 Vendetta RP société, reprise et contact
 
 <!-- demarrage -->
-php -S 127.0.0.1:8000 -t public
+    php -S 127.0.0.1:8000 -t public
 <!-- style -->
 npm run watch
 

@@ -70,6 +70,11 @@
                 class="text-white hover:text-[#fee501] font-semibold"
                 >Reprise d'activité</a
               >
+              {% if is_granted('ROLE_ADMIN') %}
+              <a href="/admin" class="text-white hover:text-[#fee501] font-semibold"
+              >Administration</a
+              >
+              {% endif %}
               {% if app.user %}
               <a href="/logout" class="text-white hover:text-[#fee501] font-semibold"
               >Déconnexion</a
@@ -82,9 +87,7 @@
               >S'enregister</a
             >
             {% endif %} 
-            <a href="/admin" class="text-white hover:text-[#fee501] font-semibold"
-            >Administration</a
-            >
+           
             </div>
 
             

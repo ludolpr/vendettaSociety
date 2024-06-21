@@ -12,8 +12,7 @@ body {
     #242424 100%
   );
 
-  background-image: url('https://cdn.discordapp.com/attachments/1200378596414468137/1252956856150917271/gta1920-wallpapers.png?ex=66741a81&is=6672c901&hm=9473a5e2648e08f9e2e7aa71d7b7ad3406e601c325b3688d39cd57e9ed72dde8&');
-  /* background-position: cover; */
+  background-image: url('https://i.goopics.net/jw7jk8.png');
   display: flex;
   flex-direction: column;
   font-family: "Kanit", sans-serif;
@@ -37,9 +36,12 @@ body {
 }
 
 .h100{
-  min-height: 100%;
+  height: 100%;
 }
 
+.mh100 {
+  min-width: 100vh;
+}
 .p125 {
   padding: 0 125px;
 }

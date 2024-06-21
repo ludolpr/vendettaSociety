@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page 404{% endblock %}
+
+{% block body %}
+<div class="bg-[#2424249f] m-0 h100 p125 flex justify-center items-center min-h-screen">
+    <div class="text-center p-10 bg-[#242424] rounded-lg shadow-lg">
+        <h1 class="text-6xl font-bold mb-4 mt-5 text-[#fee501]">404</h1>
+        <p class="text-2xl font-bold mb-4 mt-5 text-white">
+            Oups! La page que vous cherchez n'existe pas.
+        </p>
+        <p class="text-xl mb-4 text-white">
+            Il semble que la page que vous recherchez a été déplacée ou n'existe plus.
+        </p>
+        <a href="{{ path('/') }}" class="inline-block px-6 py-2 bg-[#fee501] text-black font-bold rounded hover:bg-yellow-600 transition-colors">
+            Retour à la page d'accueil
+        </a>
+    </div>
+</div>
+{% endblock %}
