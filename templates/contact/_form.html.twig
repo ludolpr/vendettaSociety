@@ -1,13 +1,11 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
     <div>
-        {{ form_label(form.title, "titre de votre message", {'label_attr': {'block text-sm font-medium text-gray-700'}}) }}
-
+        {{ form_label(form.title, "titre de votre message :", {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.title, {'attr': {'class': 'hover:text-black border border-gray-300 rounded-md shadow-sm font-medium mt-1 block w-full'}}) }}
     </div>
     <div>
-        {{ form_label(form.message, "message", {'label_attr': {'block text-sm font-medium text-gray-700'}}) }}
-
-
+        {{ form_label(form.message, "message :", {'label_attr': {'class': 'block text-sm font-medium text-gray-700'}}) }}
+        {{ form_widget(form.message, {'attr': {'class': 'hover:text-black border border-gray-300 rounded-md shadow-sm font-medium mt-1 block w-full'}}) }}
     </div>
+    <button class="btn font-medium">{{ button_label|default('Envoyer') }}</button>
 {{ form_end(form) }}

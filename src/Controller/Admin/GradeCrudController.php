@@ -21,7 +21,7 @@ class GradeCrudController extends AbstractCrudController
     {
         return [
             TextField::new('name'),
-            TextEditorField::new('details'),
+            TextField::new('details'),
             AssociationField::new('job')
         ];
     }
